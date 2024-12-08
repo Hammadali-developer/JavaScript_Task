@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Task</title>
+</head>
+<body>
+    <h1>Hi User</h1>
+
+function addTwoNumbers() {
+    let num1 = parseFloat(prompt("Enter the first number:"));
+    let num2 = parseFloat(prompt("Enter the second number:"));
+
+    if (isNaN(num1) || isNaN(num2)) {
+        alert("Please enter valid numbers!");
+        return;
+    }
+
+    let sum = num1 + num2;
+    alert(`The sum of ${num1} and ${num2} is ${sum}.`);
+}
+
+function calculateDiscount() {
+    let userName = prompt("Enter your name:");
+    let purchaseAmount = parseFloat(prompt("Enter the total purchase amount:"));
+
+    if (isNaN(purchaseAmount) || purchaseAmount <= 0) {
+        alert("Please enter a valid purchase amount!");
+        return;
+    }
+
+    const discount = 10; // 10%
+    let discountAmount = (purchaseAmount * discount) / 100;
+    let finalAmount = purchaseAmount - discountAmount;
+
+    alert(`Hello ${userName}, your total after a 10% discount is $${finalAmount.toFixed(2)}.`);
+}
+
+function favoriteAnimal() {
+    let animal = prompt("What is your favorite animal?");
+
+    if (!animal || animal.trim() === "") {
+        alert("Please enter a valid animal name!");
+        return;
+    }
+
+    alert(`Wow, ${animal}s are amazing creatures!`);
+}
+addTwoNumbers();
+calculateDiscount();
+favoriteAnimal();
+
+</body>
+</html>
